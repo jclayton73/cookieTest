@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>:D</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="cookie.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var x = parseInt(getCookie('shirts'));
+			if (x != 0 && !Number.isNaN(x)){
+				$("#cart").append('<form> <input type="number" name="shirts" value="' + x + '"></form>')
+			}
+		})
+	</script>
+
+
+</head>
+<body>
+	<a href="2.html">2!</a>
+	<a href="index.html">!!</a>
+
+	<div id="cart"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>;)</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="cookie.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			alert(document.cookie)
+			checkCookie('shirts');
+		})
+
+		function addShirt() {
+			var x = parseInt(getCookie('shirts'));
+			var y = parseInt(document.form.number.value);
+			x += y
+			setCookie('shirts', x, 10);
+			alert(document.cookie)
+		}
+	</script>
+</head>
+<body>
+	<a href="2.html">2!</a>
+	<a href="3.html">3!</a>
+	<form name="form" onsubmit="addShirt()">
+		<input type="number" name="number">
+		<input type="submit" name="submit">
+	</form>
+
+</body>
+</html>
